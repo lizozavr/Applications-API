@@ -8,7 +8,8 @@ public class ApplicationDTO {
     private String version;
     private Integer content_rate;
 
-    public ApplicationDTO(){}
+    public ApplicationDTO() {
+    }
 
     public ApplicationDTO(Integer id, String name, String version, Integer content_rate) {
         this.id = id;

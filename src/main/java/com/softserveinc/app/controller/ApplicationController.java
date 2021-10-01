@@ -73,7 +73,7 @@ public class ApplicationController {
     public ResponseEntity findNewestApplication(@RequestParam Set<Integer> ids) {
         try {
             return ResponseEntity
-                    .status(HttpStatus.OK)
+                    .status(applicationService.getNewestApplication(ids).getId() != null ? HttpStatus.OK : HttpStatus.NOT_FOUND)
                     .body(applicationService.getNewestApplication(ids));
         } catch (NotEnoughQueryVariables e) {
             return ResponseEntity.ok().body(new ApiResponseMessage(false, e.getMessage()));
