@@ -24,3 +24,14 @@ Open file and run application
  
  GET: localhost:8080/count?rates={1,2,3...} - Return count of applications with specified content rates
  ```
+ 
+ ### DB H2
+ ```shell
+ To view the database while the application is running, you can use the h2-console:
+ localhost:8080/h2-console
+ 
+ Driver Class: org.h2.Driver
+ JDBC URL: jdbc:h2:mem:appsdb
+ User Name: sa
+ Password: password
+ ```
